@@ -1,21 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, SafeAreaView,TouchableNativeFeedback, Image } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Image 
-      fadeDuration={1000}
-        blurRadius= {3}
+    <SafeAreaView style={styles.container}>
+       <Text>Leaning react</Text>
+       <TouchableNativeFeedback onPress={() => console.log("Image log")}>
+       <Image 
         source={{
         width: 200,
         height: 300,
-      
         uri: "https://picsum.photos/200/300"
       }}/>
-      <Text>Hello react</Text>
-      <StatusBar style="auto" />
-    </View>
+       </TouchableNativeFeedback>
+     
+     
+    </SafeAreaView>
   );
 }
 
